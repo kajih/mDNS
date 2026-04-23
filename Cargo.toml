@@ -1,0 +1,21 @@
+[package]
+name = "mdns-demo"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "src/server/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client/client.rs"
+
+[dependencies]
+mdns-sd = "0.19.1"
+ctrlc = "3.5.2"
+if-addrs = "0.15"
+env_logger = "0.11.10"
+log = "0.4"
+serde = { version = "1", features = ["derive"] }
+config = "0.14"
